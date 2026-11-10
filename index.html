@@ -88,7 +88,26 @@ ol,ul{margin:0;padding:0;list-style:none}
 /* =========================================================
    01 INTRODUCTION — butter / accents cherry + pink
    ========================================================= */
-.s01{background:var(--butter);height:100vh;height:100svh;min-height:480px;display:grid;grid-template-rows:auto 1fr auto;z-index:1;overflow:hidden}
+.s01 {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)),
+    url("images/collage.png") center center / cover no-repeat;
+  height: 100vh;
+  height: 100svh;
+  min-height: 480px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  z-index: 1;
+  overflow: hidden;
+}
+/* Intro text colours for dark collage */
+.s01 .folio,
+.s01 .hl,
+.s01 .enter-note {
+  color: #FFF9EE;
+}
 .s01-stage{position:relative;padding:0 clamp(16px,4vw,56px);overflow-y:auto;display:flex;flex-direction:column;justify-content:center;gap:clamp(10px,2.4svh,28px)}
 .hl{--F:min(9.4vw,10.4svh);font-family:var(--display);font-weight:400;font-size:var(--F);line-height:.9;text-transform:uppercase;letter-spacing:-.005em}
 .hl .line{display:block;overflow:hidden;padding:.02em 0 .04em}
@@ -1029,7 +1048,7 @@ const PHOTOS = {
   main: {
     src: "images/main.jpg",          // TODO: replace with real content (relative path)
     alt: "Cover photo of Soumya",    // TODO: replace with real content
-    note: "Hidden note placeholder. Write something only she will find here.", // TODO: replace with real content
+    note: "Happy Bday Dangre! Mi kahi lihnar nhiye jasti, already yevdhi website banavliye kashtani. Just know, I am always by your side whenever you need me even if no one else is❤️", // TODO: replace with real content
   },
 };
 
@@ -1037,14 +1056,17 @@ const PHOTOS = {
 const ARCHIVE = [
   { src: "images/archive-01.jpg", year: "", memory: "", caption: "", frame: "film" },     // TODO: replace with real content
   { src: "images/archive-02.jpg", year: "2015", memory: "", caption: "Bacchi!.", frame: "polaroid" },                             // TODO: replace with real content
-  { src: "images/archive-03.jpg", year: "YEAR", memory: "", caption: " ", frame: "torn" },                                 // TODO: replace with real content
+  { src: "images/archive-03.jpg", year: "YEAR", memory: "", caption: "WOOF WOOF!❤️", frame: "torn" },                                 // TODO: replace with real content
   { src: "images/archive-04.jpg", year: "2026", memory: "", caption: " ", frame: "booth" },                                // TODO: replace with real content
-  { src: "images/archive-05.jpg", year: "2025", memory: "", caption: " ", frame: "stamp" },                                // TODO: replace with real content
-  { src: "images/archive-06.jpg", year: "YEAR", memory: "", caption: " ", frame: "ticket" },                               // TODO: replace with real content
+  { src: "images/archive-05.jpg", year: "2025", memory: "", caption: "Sarang", frame: "taped" },                                // TODO: replace with real content
+  { src: "images/archive-06.jpg", year: "2025", memory: "", caption: "Mohini❤️", frame: "ticket" },                               // TODO: replace with real content
   { src: "images/archive-07.jpg", year: "2024", memory: "", caption: "THOR", frame: "taped" },                              // TODO: replace with real content
-  { src: "images/archive-08.jpg", year: "2021", memory: "", caption: " ", frame: "slide" },                                // TODO: replace with real content
+  { src: "images/archive-08.jpg", year: "2021", memory: "", caption: "Anushka❤️", frame: "slide" },                                // TODO: replace with real content
   { src: "images/archive-09.jpg", year: "2025", memory: "", caption: "With Jui❤️", frame: "taped" },                                // TODO: replace with real content
-  { src: "images/archive-10.jpg", year: "2026", memory: "", caption: " ", frame: "postcard" },                             // TODO: replace with real content
+  { src: "images/archive-10.jpg", year: "2026", memory: "", caption: " ", frame: "postcard" },    
+  { src: "images/shanu.jpg", year: "2026", memory: "", caption: "Shravani❤️", frame: "torn" },   
+  { src: "images/archive-13.jpg", year: "2025", memory: "", caption: "Deva❤️", frame: "slide" },    
+  { src: "images/archive-14.jpg", year: "2025", memory: "", caption: "Deva❤️", frame: "polaroid" },                 
 ];
 
 // Section 04. Percentages and stats are deliberate jokes (n = 1). Edit freely; >100 shows an OVERFLOW tag.
@@ -1070,15 +1092,23 @@ const COMPLIMENTS = [                 // TODO: replace with real content
   "Happy 21st birthday Choms!! I miss our late night shenanigans and cooking random recipes from YouTube. I love you always and I hope you have the best day ever ❤️‍🩹-Anushka",
   "Woof! Woof! Happy B'day to my faithful servant!🐾-Ryder🎉",
   "Happiest birthdayy soumyaa!! I wish you all the good things and hope that you be happy and healthy. You’re one of the bestest people I have met and I hope we stay the same! I cherish every fight, laugh and bickering between us. You will always have me by your side.I really hope that you get everything you want this year. Love you always ❤️-Jui",
-  "Happy Birthday, Simba!😂❤️Who would have thought that after all these years, our paths would find their way back to each other! No matter how much time passed or how far apart we were, our childhood memories have always held such a special place in my heart. I would still love to go on those treks with you, no matter how tricky the routes get, making the most ridiculous jokes and laughing our way through them. Climbing trees to fill our bags with kairi, jumping down the moment we got caught, getting all bruised up and STILL running away with our precious bag of kairi!😂 Those are the kind of memories I’ll always cherish and never stop laughing about. I’m genuinely glad we’ve found our way back to each other, and I hope we get to recreate some of that madness and make many more beautiful memories together. I’ve always wished you the very best, and I always will. May you receive all the love, happiness, success and joy you deserve. Keep roaring through life, Simba!🦁😂 Wishing you the most beautiful future ahead. Have the happiest birthday!❤️ -Mehek .................................................",
-  "Happy Birthday Soumya💗🫂You’re more like a friend than just a cousin. We’ve had so much fun together, from singing songs in our besuree voices to all the silly little moments. Wishing you all the happiness and success. Happy Birthday ✨💗-Sanika"
+  "Happy Birthday, Simba!😂❤️Who would have thought that after all these years, our paths would find their way back to each other! No matter how much time passed or how far apart we were, our childhood memories have always held such a special place in my heart. I would still love to go on those treks with you, no matter how tricky the routes get, making the most ridiculous jokes and laughing our way through them. Climbing trees to fill our bags with kairi, jumping down the moment we got caught, getting all bruised up and STILL running away with our precious bag of kairi!😂 Those are the kind of memories I’ll always cherish and never stop laughing about. I’m genuinely glad we’ve found our way back to each other, and I hope we get to recreate some of that madness and make many more beautiful memories together. I’ve always wished you the very best, and I always will. May you receive all the love, happiness, success and joy you deserve. Keep roaring through life, Simba!🦁😂 Wishing you the most beautiful future ahead. Have the happiest birthday!❤️ -Mehek...................................................",
+  "Happy birthdayy somaa!! Wishing you nothing but the best always! Wishing you all the love in the world today & everyday, may your heart receive all the love it gives to the world. So grateful for you & our friendship!! Loveyou!♥️🌸-Devakee",
+  "Happiesttt bdayyy soumyaa🧿 21 yrs of u being chaotic and messy!!! I hope u have an amazing and fun dayyy✨ And i wish u nothing but the best and may you get all the success and happiness u deserve 🌸 Miss celebrating bdays together fr😔 Cheers to our friendship cause it has been a roller coaster ride😂 See u soon🥰 Once again happyyy birthday!!-Shravani",
+  "Happiesttt Birthday, Soumyaaa!!✨🤍 Wishing you all the very best, as always! Hope you have the most amazing day, have loads of fun, and enjoy being 21 to the fullest!🥳 May this year bring you lots of happiness, good memories, exciting opportunities, and all the best things you deserve. Stay the wonderful person you are!❤️-Moha",
+  "From your brother who has always got your back whatever happens happy birthday soumya🎊🥂-Jay",
+  "सौम्या, वाढदिवसाच्या खूप खूप शुभेच्छा!❤️ तुझं येणारं वर्ष खूप छान जावो आणि तू लवकरच एक मोठी आर्किटेक्ट बनावीस, हीच शुभेच्छा! आणि हो, लवकरच माझ्या घराचं आर्किटेक्चर करून देशील, अशी अपेक्षा आहे.😂आणि जरा बालिशपणा कमी कर, करणार आहेस ना? 😜पुन्हा एकदा वाढदिवसाच्या खूप खूप शुभेच्छा! तुझा दिवस मस्त एन्जॉय कर!❤️-Sarang",
+  "Happiee birthdayyy Soumyaa!! You've grown up so beautiful and pretty! Keep glowing, shining and smiling.Lots of love always!!-Mrunal",
+  "Happy birthdayyyyyay gym paglu💪🏽 Literally a vibe to be with and I absolutely adore your lil sister and ryderrr such cutiesss🤭 Anyways have a great year ahead and enjoy our one last sem together💋❤️‍🩹-Vedashree❤️",
+  "Happy Birthday, Soumya! ❤️. I hope you always keep that beautiful smile and your crazy, fun personality. Wishing you endless happiness, success, love, and everything your heart wishes for. May this year bring you the best memories and countless reasons to smile. Love you, girl! Have the best birthday!-Shreya❤️",
+  "Happy Birthday Soumya💗 You’re more like a friend than just a cousin. We’ve had so much fun together, from singing songs in our besuree voices to all the silly little moments. Wishing you all the happiness and success. Happy Birthday ✨💗-Sanika",
 ];
 
 // Section 05 — 21 Things. One message per token, in order.
 const THINGS_21 = [
   "Your infectious laughter.",
   "Your kindness.",
-  "The way you make people feel special.",
+  "Your Hardworking nature.",
   "Your determination.",
   "Your beautiful smile.",
   "The way you care about people.",
@@ -1095,8 +1125,8 @@ const THINGS_21 = [
   "The positive energy you bring.",
   "Your unique perspective on life.",
   "The way you make people feel included.",
-  "All the little things that make you, YOU.",
-  "Simply being Soumya. And that's more than enough."
+  "Simply being Soumya. And that's more than enough.",
+  "Dangre Makde"
 ];
 
 // Section 06 — Time Capsule. Exactly five envelopes; label shows on the envelope, letter + sign inside.
@@ -1421,11 +1451,11 @@ function frameMarkup(item, i) {
     case 'torn': return `<span class="fr fr-torn"><span class="tape"></span><span class="torn-paper" data-seed="${30 + i}"><span class="slot"></span></span></span>`;
     case 'booth': return `<span class="fr fr-booth"><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="mono booth-lbl">STRIP No.${n}</span></span>`;
     case 'stamp': return `<span class="fr fr-stamp"><span class="stamp-in"><span class="slot"></span><span class="mono stamp-c">${esc(SITE.verseTitle)} POST</span><span class="stamp-val">21</span></span></span>`;
-    case 'ticket': return `<span class="fr fr-ticket"><span class="slot"></span><span class="tk-stub mono"><b>ADMIT<br>ONE</b><span>ROW 21 · SEAT ${n}</span><span>${y}</span></span></span>`;
+    case 'ticket': return `<span class="fr fr-ticket"><span class="slot"></span><span class="tk-stub mono"><b>MOH<br>INI</b><span>ROW 21 · SEAT ${n}</span><span>${y}</span></span></span>`;
     case 'contact': return `<span class="fr fr-contact"><span class="mono ct-top">▸ ${20 + i} &nbsp; ▸ ${20 + i}A</span><span class="slot"></span><svg class="grease" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 30 C 30 6, 86 4, 90 40 C 94 78, 30 96, 14 62 C 4 40, 30 18, 62 16"/></svg></span>`;
     case 'slide': return `<span class="fr fr-slide"><span class="slot"></span><span class="mono sl-lbl">${y} · SLIDE ${n}</span></span>`;
     case 'taped': return `<span class="fr fr-taped"><span class="tape tl"></span><span class="slot"></span><span class="tape tr"></span></span>`;
-    case 'postcard': return `<span class="fr fr-post"><span class="slot"></span><span class="post-side"><span class="post-stamp mono">21</span><span class="post-lines"></span><span class="hand">-Happy Diwali!</span></span></span>`;
+    case 'postcard': return `<span class="fr fr-post"><span class="slot"></span><span class="post-side"><span class="post-stamp mono">21</span><span class="post-lines"></span><span class="hand">-Shreya</span></span></span>`;
     default: return `<span class="fr fr-taped"><span class="slot"></span></span>`;
   }
 }
