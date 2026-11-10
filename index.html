@@ -766,7 +766,7 @@ ol,ul{margin:0;padding:0;list-style:none}
       </span>
       <svg class="sticker st-burst" viewBox="0 0 120 120" aria-hidden="true" data-speed="0.35"><polygon class="burst" data-n="14" data-r1="58" data-r2="44" data-cx="60" data-cy="60"/><text x="60" y="68" text-anchor="middle">ICONIC</text></svg>
       <span class="sticker st-ticket" aria-hidden="true" data-speed="0.22">LIMITED EDITION<b>1 OF 1</b>NO REPRINTS</span>
-      <span class="sticker st-stamp" aria-hidden="true" data-speed="0.18">APPROVED BY<b>DEPT. 21</b>OF MAIN CHARACTERS</span>
+      <span class="sticker st-stamp" aria-hidden="true" data-speed="0.18">MANUFACTURED ON<b>11TH</b>OF NOVEMBER</span>
       <span class="cover-hint" aria-hidden="true">
         <svg viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14 C 34 4, 70 8, 104 36"/><path d="M88 34 L105 37 L100 20"/></svg>
         psst. peel the corner
@@ -855,13 +855,13 @@ ol,ul{margin:0;padding:0;list-style:none}
   <div class="board">
     <article class="mod m-comp" aria-labelledby="m1-h">
       <span class="mod-tag">MODULE 01</span>
-      <div class="m-head"><h3 class="m-title" id="m1-h">COMPLIMENT-O-MATIC</h3><span class="mono txt" id="comp-count">TICKET #000</span></div>
+      <div class="m-head"><h3 class="m-title" id="m1-h">WISH-O-MATIC</h3><span class="mono txt" id="comp-count">TICKET #000</span></div>
       <div class="receipt">
-        <p class="receipt-out" id="comp-out" aria-hidden="true">PRESS THE BUTTON. RECEIVE NICE WORDS.</p>
+        <p class="receipt-out" id="comp-out" aria-hidden="true">PRESS THE BUTTON. RECEIVE A WISH.</p>
         <p class="sr" id="comp-live" aria-live="polite"></p>
         <span class="mono receipt-foot">*** THANK YOU FOR PLAYING ***</span>
       </div>
-      <button class="arcade" id="comp-btn" type="button" data-cursor="CLICK">GIVE ME A COMPLIMENT</button>
+      <button class="arcade" id="comp-btn" type="button" data-cursor="CLICK">CLICK TO SEE WHO WISHED YOU</button>
     </article>
 
     <article class="mod m-wish candle-root" id="wish" aria-labelledby="m2-h">
@@ -1035,16 +1035,16 @@ const PHOTOS = {
 
 // Section 03. 8–10 items. frame: film | polaroid | torn | booth | stamp | ticket | contact | slide | taped | postcard
 const ARCHIVE = [
-  { src: "images/archive-01.jpg", year: "YEAR", memory: "MEMORY 01", caption: "Caption placeholder. The story behind this one.", frame: "film" },     // TODO: replace with real content
-  { src: "images/archive-02.jpg", year: "YEAR", memory: "MEMORY 02", caption: "Caption placeholder.", frame: "polaroid" },                             // TODO: replace with real content
-  { src: "images/archive-03.jpg", year: "YEAR", memory: "MEMORY 03", caption: "Caption placeholder.", frame: "torn" },                                 // TODO: replace with real content
-  { src: "images/archive-04.jpg", year: "YEAR", memory: "MEMORY 04", caption: "Caption placeholder.", frame: "booth" },                                // TODO: replace with real content
-  { src: "images/archive-05.jpg", year: "YEAR", memory: "MEMORY 05", caption: "Caption placeholder.", frame: "stamp" },                                // TODO: replace with real content
-  { src: "images/archive-06.jpg", year: "YEAR", memory: "MEMORY 06", caption: "Caption placeholder.", frame: "ticket" },                               // TODO: replace with real content
-  { src: "images/archive-07.jpg", year: "YEAR", memory: "MEMORY 07", caption: "Caption placeholder.", frame: "contact" },                              // TODO: replace with real content
-  { src: "images/archive-08.jpg", year: "YEAR", memory: "MEMORY 08", caption: "Caption placeholder.", frame: "slide" },                                // TODO: replace with real content
-  { src: "images/archive-09.jpg", year: "YEAR", memory: "MEMORY 09", caption: "Caption placeholder.", frame: "taped" },                                // TODO: replace with real content
-  { src: "images/archive-10.jpg", year: "YEAR", memory: "MEMORY 10", caption: "Caption placeholder.", frame: "postcard" },                             // TODO: replace with real content
+  { src: "images/archive-01.jpg", year: "", memory: "", caption: "", frame: "film" },     // TODO: replace with real content
+  { src: "images/archive-02.jpg", year: "2015", memory: "", caption: "Bacchi!.", frame: "polaroid" },                             // TODO: replace with real content
+  { src: "images/archive-03.jpg", year: "YEAR", memory: "", caption: " ", frame: "torn" },                                 // TODO: replace with real content
+  { src: "images/archive-04.jpg", year: "2026", memory: "", caption: " ", frame: "booth" },                                // TODO: replace with real content
+  { src: "images/archive-05.jpg", year: "2025", memory: "", caption: " ", frame: "stamp" },                                // TODO: replace with real content
+  { src: "images/archive-06.jpg", year: "YEAR", memory: "", caption: " ", frame: "ticket" },                               // TODO: replace with real content
+  { src: "images/archive-07.jpg", year: "2024", memory: "", caption: "THOR", frame: "taped" },                              // TODO: replace with real content
+  { src: "images/archive-08.jpg", year: "2021", memory: "", caption: " ", frame: "slide" },                                // TODO: replace with real content
+  { src: "images/archive-09.jpg", year: "2025", memory: "", caption: "With Jui❤️", frame: "taped" },                                // TODO: replace with real content
+  { src: "images/archive-10.jpg", year: "2026", memory: "", caption: " ", frame: "postcard" },                             // TODO: replace with real content
 ];
 
 // Section 04. Percentages and stats are deliberate jokes (n = 1). Edit freely; >100 shows an OVERFLOW tag.
@@ -1054,39 +1054,50 @@ const DATABASE = [
     stat: "Ambient spotlight intensity measured at 4,021 imaginary lux.", footnote: "Instrument: a vibe meter we made up." },                       // TODO: replace with real content
   { label: "Professional overthinker",   file: "overthink.tmp",      percent: 97,  layout: "stack",
     stat: "Thoughts running in parallel: 47 (estimated by a calculator that also overthinks).", footnote: "Result re-checked 9 times, just in case." }, // TODO: replace with real content
-  { label: "Certified chaos creator",    file: "chaos_engine.exe",   percent: 88,  layout: "scatter",
+  { label: "Certified Bakchod",    file: "chaos_engine.exe",   percent: 88,  layout: "scatter",
     stat: "Output: 3.2 kilo-shenanigans per hour, a unit invented five minutes ago.", footnote: "Unit not recognised by any standards body." },      // TODO: replace with real content
   { label: "Unmatched personality",      file: "unmatched.sys",      percent: 100, layout: "dialog",
     stat: "Imaginary records searched: 8,000,000,000. Matches found: 0.", footnote: "Search engine: fictional. Confidence: total." },                // TODO: replace with real content
-  { label: "Laughing at the wrong time", file: "lol_timing.wav",     percent: 93,  layout: "ha",
-    stat: "Laugh latency: −0.4 s (the laugh arrives before the joke ends).", footnote: "Timed with a stopwatch that was also laughing." },          // TODO: replace with real content
-  { label: "The friend everyone needs",  file: "friend.dll",         percent: 100, layout: "props",
+  { label: "Laughing at your own jokes", file: "lol_timing.wav",     percent: 93,  layout: "ha",
+    stat: "Thinks shes the funniest person alive (very delusional).", footnote: "0 self awareness." },          // TODO: replace with real content
+  { label: "The friend everyone needs",  file: "soumya.dll",         percent: 100, layout: "props",
     stat: "Group-chat uptime: 99.98% (measurement method: none).", footnote: "Required by: everyone. Replacement part: not available.",
     props: [["Type", "Friend (essential)"], ["Size", "∞ KB"], ["Opens with", "Any mood"], ["Attributes", "[x] One of one"]] },                       // TODO: replace with real content
 ];
 
 // Section 05 — Compliment Generator. Generic placeholders, one is shown at random.
 const COMPLIMENTS = [                 // TODO: replace with real content
-  "Excellent taste in birthdays.",
-  "Certified good company.",
-  "Ten out of ten. Would celebrate again.",
-  "Making twenty-one look easy.",
-  "Officially a whole mood.",
-  "The vibe is immaculate today.",
-  "Main character lighting follows you around.",
-  "Your playlist probably slaps.",
-  "Worth every single candle.",
-  "Proof that good things come in editions of one.",
-  "Somehow cooler than this website.",
-  "Absolutely nailing the whole being-a-person thing.",
-  "Rated five stars by an imaginary panel.",
-  "Today's forecast: entirely you-shaped.",
-  "Too iconic for a template.",
-  "Born to be on the cover.",
+  "Happy 21st birthday Choms!! I miss our late night shenanigans and cooking random recipes from YouTube. I love you always and I hope you have the best day ever ❤️‍🩹-Anushka",
+  "Woof! Woof! Happy B'day to my faithful servant!🐾-Ryder🎉",
+  "Happiest birthdayy soumyaa!! I wish you all the good things and hope that you be happy and healthy. You’re one of the bestest people I have met and I hope we stay the same! I cherish every fight, laugh and bickering between us. You will always have me by your side.I really hope that you get everything you want this year. Love you always ❤️-Jui",
+  "Happy Birthday, Simba!😂❤️Who would have thought that after all these years, our paths would find their way back to each other! No matter how much time passed or how far apart we were, our childhood memories have always held such a special place in my heart. I would still love to go on those treks with you, no matter how tricky the routes get, making the most ridiculous jokes and laughing our way through them. Climbing trees to fill our bags with kairi, jumping down the moment we got caught, getting all bruised up and STILL running away with our precious bag of kairi!😂 Those are the kind of memories I’ll always cherish and never stop laughing about. I’m genuinely glad we’ve found our way back to each other, and I hope we get to recreate some of that madness and make many more beautiful memories together. I’ve always wished you the very best, and I always will. May you receive all the love, happiness, success and joy you deserve. Keep roaring through life, Simba!🦁😂 Wishing you the most beautiful future ahead. Have the happiest birthday!❤️ -Mehek .................................................",
+  "Happy Birthday Soumya💗🫂You’re more like a friend than just a cousin. We’ve had so much fun together, from singing songs in our besuree voices to all the silly little moments. Wishing you all the happiness and success. Happy Birthday ✨💗-Sanika"
 ];
 
 // Section 05 — 21 Things. One message per token, in order.
-const THINGS_21 = Array.from({ length: 21 }, (_, i) => `TODO: message #${i + 1}`); // TODO: replace with real content
+const THINGS_21 = [
+  "Your infectious laughter.",
+  "Your kindness.",
+  "The way you make people feel special.",
+  "Your determination.",
+  "Your beautiful smile.",
+  "The way you care about people.",
+  "Your sense of humour.",
+  "Your ability to make ordinary moments memorable.",
+  "Your honesty.",
+  "The little things you do without realising how much they mean.",
+  "Your strength, even on difficult days.",
+  "The way you stay true to yourself.",
+  "Your enthusiasm for the things you love.",
+  "Your thoughtful nature.",
+  "The memories we've made together.",
+  "Your courage to keep moving forward.",
+  "The positive energy you bring.",
+  "Your unique perspective on life.",
+  "The way you make people feel included.",
+  "All the little things that make you, YOU.",
+  "Simply being Soumya. And that's more than enough."
+];
 
 // Section 06 — Time Capsule. Exactly five envelopes; label shows on the envelope, letter + sign inside.
 const CAPSULE = [
@@ -1414,7 +1425,7 @@ function frameMarkup(item, i) {
     case 'contact': return `<span class="fr fr-contact"><span class="mono ct-top">▸ ${20 + i} &nbsp; ▸ ${20 + i}A</span><span class="slot"></span><svg class="grease" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 30 C 30 6, 86 4, 90 40 C 94 78, 30 96, 14 62 C 4 40, 30 18, 62 16"/></svg></span>`;
     case 'slide': return `<span class="fr fr-slide"><span class="slot"></span><span class="mono sl-lbl">${y} · SLIDE ${n}</span></span>`;
     case 'taped': return `<span class="fr fr-taped"><span class="tape tl"></span><span class="slot"></span><span class="tape tr"></span></span>`;
-    case 'postcard': return `<span class="fr fr-post"><span class="slot"></span><span class="post-side"><span class="post-stamp mono">21</span><span class="post-lines"></span><span class="hand">greetings from the archive</span></span></span>`;
+    case 'postcard': return `<span class="fr fr-post"><span class="slot"></span><span class="post-side"><span class="post-stamp mono">21</span><span class="post-lines"></span><span class="hand">-Happy Diwali!</span></span></span>`;
     default: return `<span class="fr fr-taped"><span class="slot"></span></span>`;
   }
 }
@@ -1801,19 +1812,35 @@ function burstClip(n, r1, r2) {
 function initChaos() {
   revealTitle($('#h05'));
 
-  // 01 compliment generator — never the same line twice in a row
-  const out = $('#comp-out'), live = $('#comp-live'), cnt = $('#comp-count');
-  let last = -1, tickets = 0;
-  $('#comp-btn').addEventListener('click', () => {
-    const list = COMPLIMENTS.length ? COMPLIMENTS : ['Compliment placeholder.'];
-    let i = Math.floor(Math.random() * list.length);
-    if (list.length > 1 && i === last) i = (i + 1 + Math.floor(Math.random() * (list.length - 1))) % list.length;
-    last = i;
-    const chars = splitChars(out, list[i]);
-    live.textContent = list[i];
-    cnt.textContent = `TICKET #${pad(++tickets, 3)}`;
-    if (ANIM) gsap.from(chars, { yPercent: 110, rotation: () => gsap.utils.random(-20, 20), duration: 0.5, ease: 'back.out(2)', stagger: 0.018 });
-  });
+// 01 compliment generator — sequential, in array order
+const out = $('#comp-out'), live = $('#comp-live'), cnt = $('#comp-count');
+
+let currentIndex = -1;
+let tickets = 0;
+
+$('#comp-btn').addEventListener('click', () => {
+  const list = COMPLIMENTS.length
+    ? COMPLIMENTS
+    : ['Compliment placeholder.'];
+
+  // Move to the next compliment in sequence
+  currentIndex = (currentIndex + 1) % list.length;
+
+  const chars = splitChars(out, list[currentIndex]);
+
+  live.textContent = list[currentIndex];
+  cnt.textContent = `TICKET #${pad(++tickets, 3)}`;
+
+  if (ANIM) {
+    gsap.from(chars, {
+      yPercent: 110,
+      rotation: () => gsap.utils.random(-20, 20),
+      duration: 0.5,
+      ease: 'back.out(2)',
+      stagger: 0.018
+    });
+  }
+});
 
   // 02 make a wish
   const wishLine = $('#wish-line');
